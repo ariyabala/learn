@@ -1,0 +1,7 @@
+top
+Shift+H
+Press c
+
+sudo apt-get install potool
+sudo apt-get install sysstat
+iostat -x 1 1000

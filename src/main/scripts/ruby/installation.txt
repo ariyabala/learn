@@ -1,0 +1,63 @@
+
+Mac:
+-----
+sudo port list ruby
+sudo port install ruby19
+sudo port list jruby
+sudo port install jruby
+sudo gem install rsolr
+sudo gem install highline
+sudo gem install OptionParser
+
+sudo rvm cleanup all
+rvm get latest
+rvm reload
+
+rvm install jruby
+ rvm use jruby
+rvm upgrade 1.9.2-p136 1.9.3
+
+jruby -v
+
+which jruby
+# Find the installation path of the shared gem and install if JRuby is not able to pick up
+
+sudo jruby -S gem install -i /opt/local/share/java/jruby/lib/ruby/gems/shared rsolr
+
+
+Ubuntu:
+---------
+
+Install RVM: - https://rvm.io/rvm/install
+------------------------------------------
+rvm implode
+
+gpg --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3
+\curl -sSL https://get.rvm.io | bash
+echo progress-bar >> ~/.curlrc
+
+source ~/.rvm/scripts/rvm
+type rvm | head -n 1
+
+Install ruby:
+--------------
+
+ rvm uninstall 1.9.3
+ rvm remove 1.9.3
+
+rvm install 1.9.3
+rvm use 1.9.3
+ruby -v
+
+rvm install rubygems 1.9.3
+
+gem install rsolr
+gem install highline
+gem install OptionParser
+gem install vine
+
+Install jruby:
+---------------
+rvm install jruby
+
+rvm reinstall jruby

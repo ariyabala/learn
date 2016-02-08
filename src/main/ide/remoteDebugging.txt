@@ -1,0 +1,12 @@
+Intellij > Run > Edit Configuration
+
+Add a new Configuration of type Remote.
+Select a port where the debugger will be listening.
+
+In the jetty.sh, place the additional Args to the JAVA_OPTS
+
+JAVA_OPTIONS="-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=8000 -Dsolr.solr.home=cores -Xmx12000m -Djava.awt.headless=true -XX:+UseParNewGC -XX:+ExplicitGCInvokesConcurrent -XX:+UseConcMarkSweepGC -XX:MaxTenuringThreshold=8 -XX:CMSInitiatingOccupancyFraction=40"
+
+The debugger port should be matching with the address mentioned in the jetty.sh
+
+http://blog.trifork.com/2014/07/14/how-to-remotely-debug-application-running-on-tomcat-from-within-intellij-idea/comment-page-1/

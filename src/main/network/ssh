@@ -1,0 +1,8 @@
+SSH Tunneling
+--------------
+Have the needed config segments in your ~/.ssh/config
+
+ /usr/bin/ssh -f -L 15007:localhost:15007 $machine_name/ip sleep 60
+/usr/bin/ssh -f -L 10021:localhost:10021 172.17.64.21 sleep 180
+/usr/bin/ssh -f -L 12004:localhost:12004 172.17.64.22 sleep 180
+ Verify if you are able to ssh to the $machine_name/ip with the necessary keys

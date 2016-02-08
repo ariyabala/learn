@@ -1,0 +1,18 @@
+Install java:
+-------------
+
+On Ubuntu:
+-----------
+
+	wget --no-cookies \
+	 --no-check-certificate \
+	 --header "Cookie: oraclelicense=accept-securebackup-cookie" \
+	 "http://download.oracle.com/otn-pub/java/jdk/7u72-b14/jdk-7u72-linux-x64.tar.gz" \
+	 -O /tmp/jdk-7-linux-x64.tar.gz
+
+    sudo mkdir /usr/java
+    sudo -u root tar -zxf /tmp/jdk-7-linux-x64.tar.gz -C /usr/java
+    JHome=/usr/java/jdk1.7.0_72
+
+    sudo update-alternatives --install /usr/bin/java java ${JHome%*/}/bin/java 20000
+    sudo update-alternatives --install /usr/bin/javac javac ${JHome%*/}/bin/javac 20000

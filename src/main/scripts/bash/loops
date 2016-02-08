@@ -1,0 +1,26 @@
+
+q=$((count/51))
+--------------------
+
+while [ $q -ge 0 ]
+do
+	f=$2_$q.sh
+	echo Executing sh $f
+	q=$((q-1))
+done
+--------------------
+exec<$accnos
+while read accno
+do
+if [ "$converter" = "easy" ]
+then
+  echo "Executing EasyConverter"
+ # ./PDF2HTMLBasic $pdfpath/$accno.pdf $htmlpath/$accno.html 0
+elif [ "$converter" = "PT" ]
+then
+  echo "Executing PdfToText"
+#  pdftotext -htmlmeta $pdfpath/$accno.pdf $htmlpath/$accno.html
+fi
+done
+
+--------------------
