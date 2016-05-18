@@ -5,6 +5,7 @@ It was a POC to integrate Evernote into AlphaSense system
 Below steps enable to import Evernote notes from all notebooks into AS as UserDoc with each Evernote as its attachment
 
 # Update the EDAMDemo.java with your dev token on AUTH_TOKEN variable
+# Create dev token using https://sandbox.evernote.com/api/DeveloperToken.action
 # Build and package the project using 
     mvn clean compile assembly:single
 # Update the syncEverNote.sh with appropriate credentials
