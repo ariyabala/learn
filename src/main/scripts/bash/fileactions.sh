@@ -34,3 +34,6 @@ mkdir -p dirname $reportPath
 
 #Create filename from the filePath
 basename $reportPath
+
+#Append multiple lines into one
+ tr '\n' ' ' < debug_missing_solr > output.txt
